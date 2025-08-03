@@ -21,7 +21,6 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -30,16 +29,25 @@ body {
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease;
+    background-color: white;
+    padding: 16px 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;f;
 }
 
 .nav-brand {
@@ -49,6 +57,7 @@ body {
     font-weight: 700;
     color: #007aff;
     text-decoration: none;
+    gap: 8px;
 }
 
 .nav-brand i {
