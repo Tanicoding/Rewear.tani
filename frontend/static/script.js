@@ -1379,3 +1379,41 @@ document.getElementById("feedback-form").addEventListener("submit", function (e)
     }, 5000);
 });
 
+
+
+
+
+
+
+
+  let isLoggedIn = false;
+
+  function updateNavbarAuth() {
+    const authButtons = document.getElementById("auth-buttons");
+    const userMenu = document.getElementById("user-menu");
+
+    if (isLoggedIn) {
+      authButtons.style.display = "none";
+      userMenu.style.display = "flex";
+      document.getElementById("username-display").textContent = "Welcome, User!";
+    } else {
+      authButtons.style.display = "flex";
+      userMenu.style.display = "none";
+    }
+  }
+
+
+  document.addEventListener("DOMContentLoaded", updateNavbarAuth);
+
+  
+  function login() {
+    isLoggedIn = true;
+    updateNavbarAuth();
+  }
+
+  function logout() {
+    isLoggedIn = false;
+    updateNavbarAuth();
+    showPage('landing');
+  }
+
